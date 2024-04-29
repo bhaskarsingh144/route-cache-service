@@ -1,0 +1,11 @@
+google.maps.api.key: AIzaSyCNy_rx3eHdS4TmBeNE3P1BmMsbipK37ic
+
+server.port: 9797
+spring.redis.host: localhost  # Redis server hostname or IP address
+spring.redis.port: 6379      # Default Redis port
+
+spring:
+  data:
+    mongodb:
+      name: route-cache
+      uri: mongodb://localhost:27017/${spring.data.mongodb.name}?retryWrites=true&w=majority
