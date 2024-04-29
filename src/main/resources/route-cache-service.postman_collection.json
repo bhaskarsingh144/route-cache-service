@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "2f25e9ea-8dc5-4203-9ccf-b2039580a760",
+		"name": "route-cache-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27251326"
+	},
+	"item": [
+		{
+			"name": "fetchRoute",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9797/route?source=141106&destination=110060",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"route"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "141106"
+						},
+						{
+							"key": "destination",
+							"value": "110060"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clearRouteCache",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9797/api/v1/evict-route-cache",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"api",
+						"v1",
+						"evict-route-cache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAllpincodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9797/api/v1/pincodes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"api",
+						"v1",
+						"pincodes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "sellerOrderId",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "store",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "orderLineEntries[0].createdOn",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "receiverName",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "address",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "city",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "locality",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "state",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "email",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "zipcode",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "country",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "mobile",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "uidx",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "paymentMethod",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "orderLineEntries[0].warehouse",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "orderLineEntries[0].lineFinalAmount",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "orderLineEntries[0].quantity",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "orderLineEntries[0].sku",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "orderLineEntries[0].orderLineId",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
