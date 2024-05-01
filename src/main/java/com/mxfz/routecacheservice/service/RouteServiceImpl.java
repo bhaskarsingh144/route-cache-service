@@ -18,6 +18,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
@@ -104,9 +105,11 @@ public class RouteServiceImpl implements RouteService {
     }
 
     private DirectionsRoute fetchRouteFromExternalAPI(String source, String destination) {
+        byte[] bytes = Base64.getDecoder().decode(apiKey);
+        String key = new String(bytes, StandardCharsets.UTF_8);
         DirectionsResult directionResult = null;
         try {
-            directionResult = DirectionsApi.newRequest(new GeoApiContext.Builder().apiKey(apiKey).build())
+            directionResult = DirectionsApi.newRequest(new GeoApiContext.Builder().apiKey(key).build())
                     .origin(source)
                     .destination(destination)
                     .mode(TravelMode.DRIVING)
